@@ -24,8 +24,12 @@ body {
     font-size: 1.125rem;
     font-family: 'Kumbh Sans', sans-serif;
     min-height: 100vh;
-    background: url(../images/bg-pattern-top.svg) -122% 155% no-repeat, url(../images/bg-pattern-bottom.svg) 200% -85% no-repeat; // el primer valor afecta en X y el segundo en Y
     background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    // en fondo 1 - empugar 50vw desde la derecha y 35vh desde abajo
+    background-position: right 50vw bottom 35vh, left 50vw top 50vh;
+    // en fondo 2 - empujar 50vw desde la izquierda y 50vh desde arriba.
 }
 
 main {
@@ -150,12 +154,6 @@ footer {
 }
 
 @media (max-width: 26.25rem) {
-    body {
-        background: url(../images/bg-pattern-top.svg) -420% -45% no-repeat, url(../images/bg-pattern-bottom.svg) 620% 140% no-repeat;
-        background-size: 21.875rem 21.875rem, 21.875rem 21.875rem;
-        background-color: var(--dark-cyan);
-    }
-
     main .card-profile .content .info {
         padding: 3rem 6rem 2rem;
     }
